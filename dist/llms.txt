@@ -1,0 +1,13 @@
+## Pages
+- [Accès Administrateur - JTS Services](/adminauth): Authentification pour le panneau d
+- [Authentification - Caisse](/caisseauth): Connectez-vous ou inscrivez-vous pour accéder à la Caisse.
+- [Authentification - JTS Services](/auth): Connectez-vous ou inscrivez-vous pour accéder aux services JTS.
+- [Authentification - La Foi](/lafoiauth): Connectez-vous ou inscrivez-vous pour accéder à La Foi.
+- [Fichiers - Gestionnaire de Fichiers Sécurisé](/fichiers): Application moderne de gestion de fichiers avec authentification sécurisée et interface intuitive
+- [Gestion des Factures](/factures): Créez et gérez vos devis et factures professionnelles.
+- [La Foi - Streaming de contenu inspirant](/lafoi): Votre plateforme de streaming pour des films, séries et documentaires qui élèvent l
+- [Nos Forfaits - La Foi Streaming](/pricing): Choisissez le forfait qui vous convient et commencez à regarder dès aujourd
+- [Nouveau mot de passe - La Foi](/updatepassword): No description available
+- [Panneau Administrateur](/admin): Gestion globale de JTS Services.
+- [Réinitialiser le mot de passe - JTS Fichiers](/resetpassword): No description available
+- [Relevé de Compte -](/customerstatement): No description available
