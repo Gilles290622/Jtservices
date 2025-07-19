@@ -32,6 +32,13 @@ const projects = [
     link: '/auth/factures',
     color: 'from-indigo-500 to-purple-500',
   },
+  {
+    name: 'Journal Financiers',
+    description: 'Gestion des journaux financiers.',
+    icon: <FileText className="h-8 w-8 text-red-400" />,
+    link: '/auth/journal-financiers',
+    color: 'from-red-500 to-pink-500',
+  },
 ];
 
 const cardVariants = {
@@ -50,7 +57,6 @@ const cardVariants = {
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-[#0D1117] text-white flex flex-col items-center justify-center p-8 relative overflow-hidden">
-      {/* Subtle background gradients */}
       <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-slate-900 to-transparent opacity-20"></div>
       <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-slate-900 to-transparent opacity-20"></div>
 

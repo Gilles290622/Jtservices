@@ -1,13 +1,10 @@
-import React from 'react'
-import ProtectedRoute from '@/components/ProtectedRoute'  // Sans { } , pour export default
-import JournalFinanciersAuthPage from './JournalFinanciersAuthPage'
+import React from 'react';
+import JournalFinanciersAuthPage from './JournalFinanciersAuthPage';  // Assurez-vous que ce fichier existe et rend du contenu
 
 const JournalFinanciers = () => {
   return (
-    <ProtectedRoute project="journal_financiers">
-      <JournalFinanciersAuthPage />
-    </ProtectedRoute>
-  )
-}
+    <JournalFinanciersAuthPage />  // Rend directement la page de contenu/auth
+  );
+};
 
-export default JournalFinanciers
+export default JournalFinanciers;

@@ -1,25 +1,26 @@
-import React from 'react'  // Supprimez useState/useEffect si plus utilisés
-import { Helmet } from 'react-helmet'
-import { Routes, Route } from 'react-router-dom'  // Supprimez Navigate/useNavigate/useLocation si inutilisés
-import Fichiers from '@/pages/Fichiers'
-import LaFoi from '@/pages/LaFoi'
-import Subscription from '@/pages/Subscription'
-import CashRegister from '@/pages/CashRegister'
-import CustomerStatement from '@/pages/CustomerStatement'
-import ResetPasswordPage from '@/pages/ResetPasswordPage'
-import PricingPage from '@/pages/Pricing'
-import AuthPage from '@/pages/Auth'
-import AdminPage from '@/pages/Admin'
-import UpdatePassword from '@/pages/UpdatePassword'
-import LandingPage from '@/pages/LandingPage'
-import LaFoiAuthPage from '@/pages/LaFoiAuthPage'
-import CaisseAuthPage from '@/pages/CaisseAuthPage'
-import FacturesAuthPage from '@/pages/FacturesAuthPage'
-import Factures from '@/pages/Factures'
-import AdminAuthPage from '@/pages/AdminAuthPage'
-import JournalFinanciersAuthPage from '@/pages/JournalFinanciersAuthPage'
-import JournalFinanciers from '@/pages/JournalFinanciers'  // Assurez-vous que ce fichier existe
-import ProtectedRoute from '@/components/ProtectedRoute'  // Import ici
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Routes, Route } from 'react-router-dom';  // Pas de BrowserRouter ici
+import Fichiers from '@/pages/Fichiers';
+import LaFoi from '@/pages/LaFoi';
+import Subscription from '@/pages/Subscription';
+import CashRegister from '@/pages/CashRegister';
+import CustomerStatement from '@/pages/CustomerStatement';
+import ResetPasswordPage from '@/pages/ResetPasswordPage';
+import PricingPage from '@/pages/Pricing';
+import AdminPage from '@/pages/Admin';
+import UpdatePassword from '@/pages/UpdatePassword';
+import LandingPage from '@/pages/LandingPage';
+import LaFoiAuthPage from '@/pages/LaFoiAuthPage';
+import CaisseAuthPage from '@/pages/CaisseAuthPage';
+import FacturesAuthPage from '@/pages/FacturesAuthPage';
+import Factures from '@/pages/Factures';
+import AdminAuthPage from '@/pages/AdminAuthPage';
+import JournalFinanciersAuthPage from '@/pages/JournalFinanciersAuthPage';
+import JournalFinanciers from '@/pages/JournalFinanciers';  // Assurez-vous que ce fichier existe
+import ProtectedRoute from '@/components/ProtectedRoute';
+// Import de la nouvelle page unique (supprimez l'ancien si dupliqué)
+import AuthPage from '@/pages/AuthPage';
 
 function App() {
   return (
@@ -36,13 +37,10 @@ function App() {
         <Route path="/caisse" element={<ProtectedRoute project="caisse"><CashRegister /></ProtectedRoute>} />
         <Route path="/factures" element={<ProtectedRoute project="factures"><Factures /></ProtectedRoute>} />
         <Route path="/admin" element={<ProtectedRoute project="admin"><AdminPage /></ProtectedRoute>} />
-        <Route path="/journal-financiers" element={<ProtectedRoute project="journal_financiers"><JournalFinanciers /></ProtectedRoute>} />  {/* Changé en JournalFinanciers (composant principal) */}
+        <Route path="/journal-financiers" element={<ProtectedRoute project="journal_financiers"><JournalFinanciers /></ProtectedRoute>} />
         
-        <Route path="/auth/la-foi" element={<LaFoiAuthPage />} />
-        <Route path="/auth/caisse" element={<CaisseAuthPage />} />
-        <Route path="/auth/factures" element={<FacturesAuthPage />} />
-        <Route path="/auth/admin" element={<AdminAuthPage />} />
-        <Route path="/auth/journal-financiers" element={<JournalFinanciersAuthPage />} />
+        {/* Route unique pour l'auth, avec params pour le projet */}
+        <Route path="/auth/:project" element={<AuthPage />} />
 
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/subscription" element={<Subscription />} /> 
@@ -51,7 +49,7 @@ function App() {
         <Route path="/update-password" element={<UpdatePassword />} />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
